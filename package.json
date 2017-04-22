@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-ember-stripe-service",     "homepage": "https://github.com/npmtest/node-npmtest-ember-stripe-service",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-ember-stripe-service.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [ember-stripe-service (v5.0.0)](https://github.com/buritica/ember-stripe-service#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ember-stripe-service.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ember-stripe-service) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ember-stripe-service.svg)](https://travis-ci.org/npmtest/node-npmtest-ember-stripe-service)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-ember-stripe-service",
+    "keywords": [
+        "coverage",
+        "test",
+        "ember-stripe-service"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_ember_stripe_service.js",
+    "name": "npmtest-ember-stripe-service",
+    "nameAlias": "npmtest_ember_stripe_service",
+    "nameOriginal": "npmtest-ember-stripe-service",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-ember-stripe-service.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
